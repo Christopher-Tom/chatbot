@@ -1,0 +1,62 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: they want a pokemon suggestion
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: want_pokemon_suggestion
+        entities:
+          - enemy_pokemon_name: Charizard
+      - slot_was_set:
+          - enemy_pokemon_name: enemy_pokemon_name
+      - action: action_say_enemy_name
+      - intent: affirm
+      - action: action_say_enemy_types
+
+  - story: they want a fun fact
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: want_fun_fact
+      - action: utter_pokemon_fun_fact
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: interactive_story_1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: want_pokemon_suggestion
+        entities:
+          - enemy_pokemon_name: Oddish
+      - slot_was_set:
+          - enemy_pokemon_name: enemy_pokemon_name

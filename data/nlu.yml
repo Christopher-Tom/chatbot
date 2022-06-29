@@ -1,0 +1,153 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - hello chatbot
+      - hi chatbot
+
+  - intent: want_move_suggestion
+    examples: |
+      - What move should I use?
+      - What is super effective?
+      - What move is good?
+      - What should I do here?
+
+  - intent: want_pokemon_suggestion
+    examples: |
+      - What pokemon should I use against [Charizard](enemy_pokemon_name)?
+      - What pokemon should I use against [Gengar](enemy_pokemon_name)?
+      - What pokemon should I use against [Starly](enemy_pokemon_name)?
+      - What pokemon should I use against [Skitty](enemy_pokemon_name)?
+      - What pokemon should I use against [Groudon](enemy_pokemon_name)?
+      - What pokemon should I use against [Kyogre](enemy_pokemon_name)?
+      - What pokemon should I use against [Snivy](enemy_pokemon_name)?
+      - What pokemon should I use against [Blissey](enemy_pokemon_name)?
+      - What pokemon should I use against [Venipede](enemy_pokemon_name)?
+      - What pokemon should I use against [Chandelure](enemy_pokemon_name)?
+      - What pokemon should I use against [Tyranitar](enemy_pokemon_name)?
+      - What pokemon should I use against [Ninjask](enemy_pokemon_name)?
+      - What pokemon should I use against [Blitzle](enemy_pokemon_name)?
+      - What typing is super effective against [Bulbasaur](enemy_pokemon_name)?
+      - What typing is super effective against [Silcoon](enemy_pokemon_name)?
+      - What typing is super effective against [Spinarak](enemy_pokemon_name)?
+      - What typing is super effective against [Deerling](enemy_pokemon_name)?
+      - What typing is super effective against [Elgyem](enemy_pokemon_name)?
+      - What typing is super effective against [Pansage](enemy_pokemon_name)?
+      - What typing is super effective against [Honchkrow](enemy_pokemon_name)?
+      - What typing is super effective against [Drapion](enemy_pokemon_name)?
+      - What typing is super effective against [Smeargle](enemy_pokemon_name)?
+      - What typing is super effective against [Cherubi](enemy_pokemon_name)?
+      - What typing is super effective against [Spoink](enemy_pokemon_name)?
+      - What typing is super effective against [Beartic](enemy_pokemon_name)?
+  #      - Should I switch pokemon?
+  #      - How do I defeat this pokemon?
+  #      - What pokemon is good at beating this pokemon?
+  #      - What pokemon beats this?
+
+  - intent: inform_pokemon_name
+    examples: |
+      - It's a Mankey
+      - I am against a Charizard
+      - I'm fighting Absol
+      - I am battling this Pikachu
+
+  - intent: repeat_enemy_name
+    examples: |
+      - Who am I against?
+      - What pokemon am I against?
+      - What is the enemy's name?
+      - What is the enemy?
+      - Can you repeat what the enemy's name is?
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - Thanks!
+      - ya
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: want_fun_fact
+    examples: |
+      - What are some fun facts?
+      - Tell me a fun fact
+      - Anything new?
+      - What do you know about this pokemon?
+      - Can you tell me something about this pokemon?
+      - I want to hear a fun fact
+      - Tell me another fun fact
+      - Can you tell me a fact about this pokemon?
+      - What fact can you tell me about Absol?

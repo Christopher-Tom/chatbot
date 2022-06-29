@@ -1,0 +1,74 @@
+version: "3.1"
+intents:
+  - affirm
+  - bot_challenge
+  - deny
+  - goodbye
+  - greet
+  - mood_great
+  - mood_unhappy
+  - want_fun_fact
+  - want_move_suggestion
+  - want_pokemon_suggestion
+  - repeat_enemy_name
+entities:
+  - enemy_pokemon_name
+slots:
+  enemy_pokemon_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: enemy_pokemon_name
+        intent: want_pokemon_suggestion
+
+forms:
+  enemy_name_form:
+    required_slots:
+      - enemy_pokemon_name
+
+responses:
+  utter_ask_current_pokemon:
+    - text: What pokemon are you using?
+  utter_ask_enemy_pokemon:
+    - text: What pokemon is the enemy using?
+  utter_suggest_pokemon:
+    - text: "Here is what I think: "
+  utter_pokemon_fun_fact:
+    - text: |-
+        I've just learned recently this about Ditto: When it spots an
+        enemy, its body
+        transfigures into an almost perfect
+        copy of its oppo­nent.
+  utter_greet:
+    - text: Hey! How are you?
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+    - text: Did that help you?
+  utter_happy:
+    - text: Great, carry on!
+  utter_goodbye:
+    - text: Bye
+  utter_iamabot:
+    - text: I am a bot, powered by Rasa.
+  utter_submit:
+    - text: Hmm, that is one tough cookie.
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+  - action_hello_world
+  - utter_ask_current_pokemon
+  - utter_ask_enemy_pokemon
+  - utter_did_that_help
+  - action_say_enemy_name
+  - utter_goodbye
+  - utter_greet
+  - utter_happy
+  - utter_pokemon_fun_fact
+  - utter_submit
+  - utter_suggest_pokemon
+  - action_say_enemy_types
